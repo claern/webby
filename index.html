@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Increment</title>
+    <style>
+        /* Full screen setup */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        /* The large number in the center */
+        #number {
+            font-size: 10vw; /* Responsive text size */
+            color: #333;
+            -webkit-user-select: none; /* Prevent text selection for Safari */
+            user-select: none; /* Prevent text selection */
+        }
+    </style>
+</head>
+<body>
+    <!-- The number element -->
+    <div id="number">0</div>
+
+    <script>
+        // Initial value
+        let count = 0;
+
+        // Function to increment the count and update the number on click
+        document.body.addEventListener('click', function() {
+            count++; // Increment the count
+            document.getElementById('number').textContent = count; // Update the displayed number
+        });
+    </script>
+</body>
+</html>
